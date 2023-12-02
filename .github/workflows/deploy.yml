@@ -5,6 +5,12 @@ on:
     branches:
       - main  
 
+env:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: "5c57aae5-8f37-41aa-a44a-928ebe7d6baf"
+      ARM_SUBSCRIPTION_ID: "946eebad-470c-4b07-a3c8-8d1eca5950de"
+      ARM_TENANT_ID: "5c57aae5-8f37-41aa-a44a-928ebe7d6baf"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,5 +29,3 @@ jobs:
 
     - name: Deploy Terraform
       run: terraform apply -auto-approve
-      env:
-        TF_VAR_example_var: ${{ secrets.EXAMPLE_VAR }}  

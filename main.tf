@@ -16,12 +16,12 @@ resource "azurerm_virtual_network" "vnPrueba" {
 
    subnet {
     name           = "subnet1"
-    address_prefix = "10.0.1.0/24"  # Define el rango de direcciones IP para la subred
+    address_prefix = "10.0.1.0/24" 
   }
 
   subnet {
     name           = "subnet2"
-    address_prefix = "10.0.2.0/24"  # Otro rango de direcciones IP para otra subred
+    address_prefix = "10.0.2.0/24" 
   }
 }
 
